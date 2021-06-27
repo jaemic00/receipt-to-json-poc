@@ -1,6 +1,6 @@
 from sys import argv
 from pathlib import Path
-from src.json_generator.json_generator import generate_json
+from json_generator.json_generator import generate_json
 
 def handle_receipt(receipt_path : Path) -> None:
     receipt_json = generate_json(receipt_path)
@@ -8,7 +8,7 @@ def handle_receipt(receipt_path : Path) -> None:
     return
 
 def main() -> None:
-    if len(argv == 1):
+    if len(argv) == 1:
         print("No args provided. Exiting.")
         return
     elif len(argv) > 2:
@@ -27,6 +27,7 @@ def main() -> None:
             print("File not found. Exiting.")
             return
 
+main()
 
         
 
