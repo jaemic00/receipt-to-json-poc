@@ -1,9 +1,11 @@
 from sys import argv
 from pathlib import Path
+from src.json_generator.json_generator import generate_json
 
-def handle_receipt(path):
-    
-    pass
+def handle_receipt(receipt_path : Path) -> None:
+    receipt_json = generate_json(receipt_path)
+    print(receipt_json)
+    return
 
 def main() -> None:
     if len(argv == 1):
