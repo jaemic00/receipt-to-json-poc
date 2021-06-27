@@ -2,6 +2,7 @@ from sys import argv
 from pathlib import Path
 
 def handle_receipt(path):
+    
     pass
 
 def main() -> None:
